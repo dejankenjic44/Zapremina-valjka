@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+	<title>Računanje zapremine valjka</title>
+</head>
+<body>
+    <form>
+        <label for="poluprecnik">Poluprečnik osnove valjka:</label>
+        <input type="number" id="poluprecnik" value="1" required>
+        <label for="visina">Visina valjaka:</label>
+        <input type="number" id="visina" value="1" required>
+        <button type="button" onclick="myFunction()">Izračunaj</button>
+        <input id="rezultat" type="number" disabled value="">
+    </form>
+
+    <script type="text/javascript">
+
+        function myFunction() {
+
+            var r = document.getElementById("poluprecnik").value;
+
+            var H = document.getElementById("visina").value;
+
+            var V = document.getElementById("rezultat");
+
+            V.value = Math.pow(r, 2) * Math.PI * H;
+        }
+    </script>
+
+</body>
+</html>
